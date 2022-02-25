@@ -14,7 +14,7 @@ const Layout = ({ children, title }: LayoutProps) => {
       </Head>
       <Navbar />
 
-      <div className="mx-auto max-w-3xl py-10 sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-8 lg:gap-8 lg:px-8">
+      <div className="mx-auto max-w-3xl py-8 sm:px-6 lg:grid lg:max-w-4xl lg:grid-cols-8 lg:gap-8 lg:px-8">
         {children}
       </div>
     </div>

@@ -1,15 +1,16 @@
-import { Post } from "../interfaces/post";
-import Button from "./Button";
+import Image from "next/image";
+import { Post } from '../interfaces/post';
+import Button from './Button';
 
 interface ArticleItemProps {
-    post: Post;
+  post: Post;
 }
 
-const ArticleItem = ({post}: ArticleItemProps) => {
+const ArticleItem = ({ post }: ArticleItemProps) => {
   return (
-    <div className="flex items-center justify-between space-x-5 space-y-5">
-      <div className="flex flex-1 h-full flex-col justify-between items-start">
-        <div className="">
+    <div className="flex justify-between space-x-5 py-8">
+      <div className="inline-flex flex-1 flex-col items-start justify-between">
+        <div>
           <span className="text-lg text-sky-600">{post.category}</span>
           <h3 className="font-extrabold text-slate-800">{post.title}</h3>
           <p className="font-medium text-slate-600">{post.description}</p>
@@ -18,10 +19,7 @@ const ArticleItem = ({post}: ArticleItemProps) => {
           <span>Read more</span>
         </Button>
       </div>
-      <div
-        className="h-64 w-full flex-1 rounded-lg bg-red-600 bg-cover bg-center"
-        style={{ backgroundImage: `url(${post.cover})` }}
-      />
+      <div className="flex-1 h-64 w-full rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${post.cover})` }}/>
     </div>
   );
 };
