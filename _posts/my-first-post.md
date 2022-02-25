@@ -1,8 +1,10 @@
 ---
 title: My first Post
 description: This is my first post ever, this is for testing porpuses.
-date: 2022-02-24 20:01:11
+date: '2022-02-24 20:01:11'
 slug: my-first-post
+cover: /images/posts/my-first-post/cover.jpg
+category: 3D
 ---
 
 # Hi my name is Ronald
