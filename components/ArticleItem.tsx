@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
 import { Post } from '../interfaces/post';
 import Button from './Button';
 
@@ -15,11 +16,16 @@ const ArticleItem = ({ post }: ArticleItemProps) => {
           <h3 className="font-extrabold text-slate-800">{post.title}</h3>
           <p className="font-medium text-slate-600">{post.description}</p>
         </div>
-        <Button>
-          <span>Read more</span>
-        </Button>
+        <Link href={`/posts/${post.slug}`} passHref>
+          <Button>
+            <span>Read more</span>
+          </Button>
+        </Link>
       </div>
-      <div className="flex-1 h-64 w-full rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${post.cover})` }}/>
+      <div
+        className="h-64 w-full flex-1 rounded-lg bg-cover bg-center"
+        style={{ backgroundImage: `url(${post.cover})` }}
+      />
     </div>
   );
 };

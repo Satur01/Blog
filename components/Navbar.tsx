@@ -22,7 +22,6 @@ const Routes = {
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(router.asPath);
 
   return (
     <div className="w-full flex justify-center space-x-8 items-center pt-4 pb-3">

@@ -5,6 +5,6 @@ export interface Post {
     category: string;
     date?: string;
     cover: string;
-    content?: string;
+    content: string;
 };
   
