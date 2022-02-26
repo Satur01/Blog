@@ -6,7 +6,6 @@ import { InferGetStaticPropsType } from 'next';
 import { GetStaticPaths } from 'next';
 import { Post } from '../../interfaces/post';
 import Layout from '../../components/Layout';
-import Image from 'next/image';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const files = fs.readdirSync(path.join('_posts'));
@@ -48,7 +47,7 @@ const PostPage = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
     <Layout title={post.title}>
       <main className="lg:col-span-full">
         <div
-          className="mb-6 h-96 w-full rounded-lg bg-cover bg-center"
+          className="mb-12 h-96 w-full rounded-lg bg-cover bg-center ring-2 hover:ring-green-600"
           style={{ backgroundImage: `url(${post.cover})` }}
         />
         <article dangerouslySetInnerHTML={{ __html: marked(post.content) }} className="prose lg:prose-xl" />

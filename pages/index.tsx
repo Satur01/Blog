@@ -25,7 +25,7 @@ const Home = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Home">
       <main className="lg:col-span-full">
-        <h2 className="mb-6 w-full text-center text-2xl font-extrabold text-slate-800">Latest Posts</h2>
+        <h2 className="mb-6 w-full text-center text-3xl font-extrabold text-slate-800">Latest Posts</h2>
         <div className="divide-y-2">
           {posts.map(post => (
             <ArticleItem key={post.title} post={post} />

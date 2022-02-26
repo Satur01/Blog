@@ -5,12 +5,12 @@ interface ButtonProps {
 
 const Button = ({ children, onClick }: ButtonProps) => {
   return (
-    <div
-      className="inline-flex items-center justify-center rounded-lg border border-slate-900 bg-white px-4 py-1"
+    <button
+      className="shadow-sm outline-none focus:bg-slate-900 inline-flex cursor-pointer select-none items-center justify-center rounded-lg border border-slate-600 bg-white px-4 py-1 text-slate-600 transition-colors hover:border-slate-100 hover:bg-slate-600 hover:text-slate-50"
       onClick={onClick}
     >
       {children}
-    </div>
+    </button>
   );
 };
 
